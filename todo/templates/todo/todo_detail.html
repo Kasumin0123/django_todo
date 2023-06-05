@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main %}
+<h3>{{object.title}}</h3>
+<h4>{{object.list}}</h4>
+<div>
+    <p>{{ object.description | linebreaksbr }}</p>
+    {% if object.scheduledTime %}
+        <p>予定日: <time>{{ object.scheduledTime}}</time></p>
+    {% endif %}
+    <p><a href={% url 'todoupdate' object.id%}>Edit</a></p>
+    <p><a href={% url 'tododelete' object.id%}>Delete</a></p>
+    <p><a href={% url 'todolist' %}>Return to the list</a></p>
+</div>
+
+{% endblock main %}

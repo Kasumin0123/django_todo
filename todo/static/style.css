@@ -1,0 +1,21 @@
+@import "sanitize.css";
+
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: teal;
+    color: white;
+}
+
+.icon {
+    color: white;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+
+.content-inner {
+    padding: 10px;
+}
