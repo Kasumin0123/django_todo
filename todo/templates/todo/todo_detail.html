@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
 {% block main %}
 <h3>{{object.title}}</h3>
-<h4>{{object.list}}</h4>
+{% if object.list %}
+<h4>リスト: {{object.list}}</h4>
+{% else %}
+<p>リストが指定されていません</p>
+{% endif %}
 <div>
     <p>{{ object.description | linebreaksbr }}</p>
-    {% if object.scheduledTime %}
-        <p>予定日: <time>{{ object.scheduledTime}}</time></p>
+    {% if object.dueDate %}
+        <p>予定日: <time>{{ object.dueDate}}</time></p>
     {% endif %}
-    <p><a href={% url 'todoupdate' object.id%}>Edit</a></p>
-    <p><a href={% url 'tododelete' object.id%}>Delete</a></p>
-    <p><a href={% url 'todolist' %}>Return to the list</a></p>
+    {% if object.dueTime %}
+        <p>予定時間: <time>{{ object.dueTime}}</time></p>
+    {% endif %}
+    <div class="btn-container">
+        <a class='link-btn' href={% url 'todoupdate' object.id%}><button class="btn btn-green">Edit</button></a>
+        <a class='link-btn' href={% url 'tododelete' object.id%}><button class="btn btn-red">Delete</button></a>
+    </div>
+    <a href={% url 'todolist' %}>Return to the list</a>
 </div>
 
 {% endblock main %}

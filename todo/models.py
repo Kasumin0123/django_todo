@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse_lazy
+
 # Create your models here.
 class List(models.Model):
     name = models.CharField(
@@ -36,7 +37,12 @@ class Todo(models.Model):
         null=False
     )
 
-    scheduledTime = models.DateTimeField(
+    dueDate = models.DateField(
+        blank=True,
+        null=True
+    )
+
+    dueTime = models.TimeField(
         blank=True,
         null=True
     )
@@ -58,3 +64,4 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+    

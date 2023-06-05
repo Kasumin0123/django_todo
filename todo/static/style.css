@@ -17,5 +17,52 @@
 }
 
 .content-inner {
-    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.link-btn {
+    text-decoration: none;
+}
+
+.btn {
+    display: block;
+    padding: 5px 1em;
+    height: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.btn.btn-blue {
+    background-color: steelblue;
+    color: white;
+}
+
+.btn.btn-red {
+    background-color: red;
+    color: white;
+}
+
+.btn.btn-green {
+    background-color: teal;
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.btn.btn-sm {
+    display: inline !important;
+    height: 25px !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
+    padding: 5px 0.5em !important;
+    font-size: 16px !important;
+    font-weight: 400;
 }

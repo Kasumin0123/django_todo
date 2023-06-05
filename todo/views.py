@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Todo, List
 from . import models
+from .forms import TodoForm
 # Create your views here.
 
 class Index(TemplateView):
@@ -16,14 +17,17 @@ class Detail(DetailView):
 
 class Create(CreateView):
     model = Todo
+    form_class = TodoForm
     
-    # 編集対象にするフィールド
-    fields = ["title", "description", "list", "scheduledTime"]
+    # form_classを定義したときは競合を起こすので設定してはいけない
+    # fields = ["title", "description", "list", "scheduledTime"]
 
 class Update(UpdateView):
     model = Todo
+    form_class = TodoForm
 
-    fields = ["title", "description", "list", "scheduledTime"]
+    # form_classを定義したときは競合を起こすので設定してはいけない
+    # fields = ["title", "description", "list", "scheduledTime"]
 
 class Delete(DeleteView):
     model = Todo
