@@ -15,10 +15,10 @@
         <p>予定時間: <time>{{ object.dueTime}}</time></p>
     {% endif %}
     <div class="btn-container">
-        <a class='link-btn' href={% url 'todoupdate' object.id%}><button class="btn btn-green">Edit</button></a>
-        <a class='link-btn' href={% url 'tododelete' object.id%}><button class="btn btn-red">Delete</button></a>
+        <a class='link-btn' href={% url 'todoupdate' object.id%}><button class="btn btn-green">編集</button></a>
+        <a class='link-btn' href={% url 'tododelete' object.id%}><button class="btn btn-red">削除</button></a>
     </div>
-    <a href={% url 'todolist' %}>Return to the list</a>
+    <a href={% url 'todolist' %}>Todo一覧に戻る</a>
 </div>
 
 {% endblock main %}

@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block main %}
-<h2>All List</h2>
+<h2>リスト一覧</h2>
 <ul>
     {% for list in object_list %}
     <li>{{list.name}} <a class="link-btn" href={% url 'listdelete' list.id%}><button class="btn btn-red btn-sm">削除</button></a></li>
     {% endfor %}
 </ul>
-<p><a class='link-btn' href={% url "listcreate" %}><button class="btn btn-blue">New List </button></a></p>
-<p><a href={% url "todolist" %}>All todo</a></p>
+<p><a class='link-btn' href={% url "listcreate" %}><button class="btn btn-blue">リストを追加</button></a></p>
+<p><a href={% url "todolist" %}>Todo一覧に戻る</a></p>
 {% endblock main %}

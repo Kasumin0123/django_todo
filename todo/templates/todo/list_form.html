@@ -1,9 +1,7 @@
-{% extends 'base.html' %}
-{% block main %}
-<h2>New List</h2>
+{% extends 'base.html' %} {% block main %}
+<h2>Listを追加</h2>
 <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-green">Save</button>
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="btn btn-green">保存</button>
 </form>
 {% endblock main %}

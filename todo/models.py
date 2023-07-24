@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse_lazy
 
 # Create your models here.
+
+
 class List(models.Model):
     name = models.CharField(
         max_length=63,
@@ -12,10 +14,11 @@ class List(models.Model):
 
     def get_absolute_url(self):
         return reverse_lazy("listindex")
-    
+
     def __str__(self):
         return self.name
-    
+
+
 class Todo(models.Model):
     created = models.DateTimeField(
         auto_now_add=True,
@@ -64,4 +67,3 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
-    

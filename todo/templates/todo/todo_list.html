@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block main %}
-<h2>Todo List</h2>
+<h2>Todo 一覧</h2>
 <ul>
     {% for todo in object_list %}
     <li><a href={% url 'tododetail' todo.id%}>{{todo.title}}</a></li>
     {% endfor %}
 </ul>
-<p><a class="link-btn" href={% url "todocreate" %}> <button class="btn btn-blue">Add todo</button> </a></p>
-<p><a href={% url "listindex" %}> All List </a></p>
+<p><a class="link-btn" href={% url "todocreate" %}> <button class="btn btn-blue">Todoを追加する</button> </a></p>
+<p><a href={% url "listindex" %}> リストを管理する </a></p>
 {% endblock main %}
