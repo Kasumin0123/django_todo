@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
-{% block main %}
-<h2>Are you sure to delete "{{ object.name }}" ?</h2>
+{% extends 'base.html' %} {% block main %}
+<h2>"{{ object.name }}"を削除しますか？</h2>
+<a class="link-btn" href={% url 'listindex'%}><button class="btn btn-green">戻る</button></a>
 <form method="post">
     {% csrf_token %}
-    <input type="submit" value="Delete"/>
+    <input class="btn btn-red" type="submit" value="削除する" />
 </form>
 {% endblock main %}
