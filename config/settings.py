@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todo_server_89xs',
-        'USER': 'todo_server_89xs_user',
-        'PASSWORD': 'D2ULKsSlWX5VU7gec11JjsD3Wf6wQpYt',
-        'HOST': 'dpg-ck81vbvq54js73a1jcsg-a',
+        'NAME': 'todo_ualn',
+        'USER': 'todo_ualn_user',
+        'PASSWORD': 'kRzeNrz0UkrTJVL8IvkkQ8e42reKQigT',
+        'HOST': 'dpg-cmovf3mn7f5s73dahsr0-a',
         'PORT': '5432',
     }
 }
